@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<script src="index.js" type="text/javascript">
+/*function submitCall(){
+	alert("Hello");
+}*/
+</script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<form>
+
+<label for="userid">UserId :</label>
+            <input type="text" name="userid" id="userid" placeholder="Required and must be of length 5 to 12"><span id="useridError"></span><br>
+            <label for="pass">Password :</label>
+            <input type="password" name="pass" id="pass" placeholder="Required and must be of length 7 to 12"><span id="passError"></span><br> 
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name" placeholder="Required and alphabets only"><br>
+            <label for="add">Address :</label>
+            <input type="text" name="add" id="add" placeholder="Optional" required>  <br>
+            <label for="selectId">Country : </label>
+            <select id="selectId">
+                <script>
+                    var x=['India' , 'UK' , 'USA' , 'China' ,'Bhutan'];   
+                    for(i=0;i<5;i++){
+                    var option = "<option value='" + x[i] + "'>" + x[i] + "</option>"
+                    document.getElementById('selectId').innerHTML += option;   
+                    } 
+                </script>
+            </select> <br>
+            <!-- <p>Sex :</p>     -->
+            <label>Sex : </label>
+            <input type="radio" id="male" name="gender" value="Male">Male 
+            <input type="radio" id="female" name="gender" value="Female">Female 
+            <input type="radio" id="others" name="gender" value="Others">Others <br>
+            <p>Language :</p>
+            <input type="radio" name="lan" id="lan" value="english">English 
+            <input type="radio" name="lan" id="lan" value="nonenglish">Non English<span id="lanError"></span><br>
+            <label for="zip">ZIP :</label>
+            <input type="text" name="zip" id="zip"> <span id="zipError"></span> <br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" placeholder="Required . Must be a valid email"><br>
+            <label for="phone">Phone :</label>
+            <input type="text" name="phone" id="phone" placeholder="Required . Must be a valid Phone Number"><span id="phoneError"></span><br>
+            <label for="pan">Pan ID :</label>
+            <input type="text" name="pan" id="pan" placeholder="Required . Must be a valid PAN Number"><span id="panError"></span><br>
+            <p>About :</p><textarea name="comment" form="usrform">Enter text here...</textarea><br>
+
+
+<input type="button" onclick="submitCall();" value="SUBMIT"></input>
+</form>
+</body>
+</html>
